@@ -3,7 +3,6 @@
  */
 package com.inacionery.basic.service;
 
-import com.inacionery.basic.domain.Car;
 import com.inacionery.basic.domain.Person;
 
 import java.util.List;
