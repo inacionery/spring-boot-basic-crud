@@ -25,6 +25,7 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.transaction.Transactional;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -95,6 +96,13 @@ public class CarResourceIntTest {
     @Before
     public void initTest() {
         car = createEntity();
+    }
+
+    @After
+    public void shutDown() {
+        carRepository.delete(car);
+
+        carRepository.flush();
     }
 
     @Test
